@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Fabric Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🧵 Digital Fabric Atlas</h1>
+  <p class="subtitle">
+    A fabric knowledge hub for better decision-making
+  </p>
+</header>
+
+<section class="filters">
+  <button onclick="filterFabric('all')">All</button>
+  <button onclick="filterFabric('summer')">Summer</button>
+  <button onclick="filterFabric('winter')">Winter</button>
+  <button onclick="filterFabric('sustainable')">Sustainable</button>
+</section>
+
+<section class="fabric-grid">
+
+  <!-- Cotton -->
+  <div class="fabric-card summer sustainable">
+    <img src="images/fabrics/cotton.jpg" alt="Cotton Fabric">
+    <h3>Cotton</h3>
+    <p><strong>GSM:</strong> 120–180</p>
+    <p><strong>Use:</strong> Casual, Kidswear</p>
+    <p class="why">Breathable, cost-effective for summer assortments</p>
+    <span class="tag green">Sustainable</span>
+  </div>
+
+  <!-- Denim -->
+  <div class="fabric-card winter">
+    <img src="images/fabrics/denim.jpg" alt="Denim Fabric">
+    <h3>Denim</h3>
+    <p><strong>GSM:</strong> 250–400</p>
+    <p><strong>Use:</strong> Bottomwear</p>
+    <p class="why">High durability, suitable for core retail categories</p>
+    <span class="tag blue">Durable</span>
+  </div>
+
+  <!-- Rayon -->
+  <div class="fabric-card summer">
+    <img src="images/fabrics/rayon.jpg" alt="Rayon Fabric">
+    <h3>Rayon</h3>
+    <p><strong>GSM:</strong> 110–150</p>
+    <p><strong>Use:</strong> Dresses, Tops</p>
+    <p class="why">Good drape for trend-led collections</p>
+    <span class="tag pink">Flowy</span>
+  </div>
+
+  <!-- Polyester -->
+  <div class="fabric-card winter">
+    <img src="images/fabrics/polyester.jpg" alt="Polyester Fabric">
+    <h3>Polyester</h3>
+    <p><strong>GSM:</strong> 180–240</p>
+    <p><strong>Use:</strong> Activewear</p>
+    <p class="why">Low cost, high durability for mass retail</p>
+    <span class="tag yellow">Cost Efficient</span>
+  </div>
+
+</section>
+
+<footer>
+  <p>Built for fashion merchandising & retail learning</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
