@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Digital Fabric Atlas</title>
+  <title>Digital Fabric Library</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>🧵 Digital Fabric Atlas</h1>
+  <h1>🧵 Digital Fabric Library</h1>
   <p class="subtitle">
-    A fabric knowledge hub for better decision-making
+    Merchandising-focused fabric decision support tool
   </p>
 </header>
 
+<!-- FILTERS -->
 <section class="filters">
   <button onclick="filterFabric('all')">All</button>
   <button onclick="filterFabric('summer')">Summer</button>
@@ -21,139 +22,66 @@
   <button onclick="filterFabric('sustainable')">Sustainable</button>
 </section>
 
+<!-- FABRIC CARDS -->
 <section class="fabric-grid">
 
-  <!-- Cotton -->
   <div class="fabric-card summer sustainable">
-    <img src="images/fabrics/cotton.JPG" alt="Cotton Fabric">
+    <img src="images/fabrics/cotton.jpg">
     <h3>Cotton</h3>
-    <p><strong>GSM:</strong> 120–180</p>
-    <p><strong>Use:</strong> Casual, Kidswear</p>
-    <p class="why">Breathable, cost-effective for summer assortments</p>
+    <p>GSM: 120–180</p>
+    <p>Use: Casual, Kidswear</p>
+    <p class="why">Breathable and suitable for summer assortments</p>
     <span class="tag green">Sustainable</span>
   </div>
 
-  <!-- Denim -->
-  <div class="fabric-card winter">
-    <img src="images/fabrics/denim.JPG" alt="Denim Fabric">
-    <h3>Denim</h3>
-    <p><strong>GSM:</strong> 250–400</p>
-    <p><strong>Use:</strong> Bottomwear</p>
-    <p class="why">High durability, suitable for core retail categories</p>
-    <span class="tag blue">Durable</span>
-  </div>
-
-  <!-- Rayon -->
   <div class="fabric-card summer">
-    <img src="images/fabrics/rayon.jpg.JPG" alt="Rayon Fabric">
+    <img src="images/fabrics/rayon.jpg">
     <h3>Rayon</h3>
-    <p><strong>GSM:</strong> 110–150</p>
-    <p><strong>Use:</strong> Dresses, Tops</p>
-    <p class="why">Good drape for trend-led collections</p>
-    <span class="tag pink">Flowy</span>
+    <p>GSM: 110–150</p>
+    <p>Use: Dresses, Tops</p>
+    <p class="why">Fashion-led fabric with good drape</p>
+    <span class="tag">Fashion</span>
   </div>
 
-  <!-- Polyester -->
   <div class="fabric-card winter">
-    <img src="images/fabrics/polyester .JPG" alt="Polyester Fabric">
+    <img src="images/fabrics/denim.jpg">
+    <h3>Denim</h3>
+    <p>GSM: 250–400</p>
+    <p>Use: Bottomwear</p>
+    <p class="why">Durable core fabric for retail basics</p>
+    <span class="tag">Durable</span>
+  </div>
+
+  <div class="fabric-card winter">
+    <img src="images/fabrics/polyester.jpg">
     <h3>Polyester</h3>
-    <p><strong>GSM:</strong> 180–240</p>
-    <p><strong>Use:</strong> Activewear</p>
-    <p class="why">Low cost, high durability for mass retail</p>
-    <span class="tag yellow">Cost Efficient</span>
+    <p>GSM: 180–240</p>
+    <p>Use: Activewear</p>
+    <p class="why">Cost-efficient performance fabric</p>
+    <span class="tag">Cost Efficient</span>
   </div>
 
 </section>
-  <section class="comparison">
-  <h2>🔍 Fabric Comparison</h2>
-  <p class="subtitle">Compare fabrics to support merchandising decisions</p>
 
-  <div class="compare-grid">
-
-    <div class="compare-card">
-      <h3>Cotton</h3>
-      <ul>
-        <li>GSM: 120–180</li>
-        <li>Season: Summer</li>
-        <li>Cost: Medium</li>
-        <li>Durability: Medium</li>
-        <li>Sustainability: High</li>
-      </ul>
-    </div>
-
-    <div class="compare-card">
-      <h3>Polyester</h3>
-      <ul>
-        <li>GSM: 180–240</li>
-        <li>Season: All-season</li>
-        <li>Cost: Low</li>
-        <li>Durability: High</li>
-        <li>Sustainability: Low</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-  <section class="products">
-  <h2>👗 Product Applications</h2>
-  <p class="subtitle">Where each fabric performs best in retail assortments</p>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <h3>Cotton</h3>
-      <p><strong>Used in:</strong></p>
-      <ul>
-        <li>T-shirts</li>
-        <li>Kidswear</li>
-        <li>Summer dresses</li>
-      </ul>
-      <p class="why">Chosen for breathability and comfort in high-volume summer categories.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Denim</h3>
-      <p><strong>Used in:</strong></p>
-      <ul>
-        <li>Jeans</li>
-        <li>Jackets</li>
-        <li>Skirts</li>
-      </ul>
-      <p class="why">Core retail fabric offering durability and long lifecycle.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Polyester</h3>
-      <p><strong>Used in:</strong></p>
-      <ul>
-        <li>Activewear</li>
-        <li>Outerwear</li>
-        <li>Lining fabrics</li>
-      </ul>
-      <p class="why">Cost-efficient choice for performance-led categories.</p>
-    </div>
-
-  </div>
-</section>
+<!-- COMPARISON -->
 <section class="comparison">
   <h2>🔍 Dynamic Fabric Comparison</h2>
-  <p class="subtitle">Select two fabrics to compare merchandising impact</p>
 
   <div class="compare-select">
     <select id="fabric1">
       <option value="">Select Fabric</option>
       <option value="cotton">Cotton</option>
+      <option value="rayon">Rayon</option>
       <option value="denim">Denim</option>
       <option value="polyester">Polyester</option>
-      <option value="rayon">Rayon</option>
     </select>
 
     <select id="fabric2">
       <option value="">Select Fabric</option>
       <option value="cotton">Cotton</option>
+      <option value="rayon">Rayon</option>
       <option value="denim">Denim</option>
       <option value="polyester">Polyester</option>
-      <option value="rayon">Rayon</option>
     </select>
 
     <button onclick="compareFabrics()">Compare</button>
@@ -161,42 +89,9 @@
 
   <div class="compare-grid" id="compareResult"></div>
 </section>
-  <section class="recommend">
-  <button onclick="recommendFabric()">Recommend Best Fabric</button>
-  <div id="recommendation"></div>
-</section>
-  <section class="matrix">
-  <h2>📊 Cost vs Performance Matrix</h2>
 
-  <table>
-    <tr>
-      <th>Fabric</th>
-      <th>Cost</th>
-      <th>Durability</th>
-      <th>Sustainability</th>
-    </tr>
-    <tr>
-      <td>Cotton</td>
-      <td>Medium</td>
-      <td>Medium</td>
-      <td>High</td>
-    </tr>
-    <tr>
-      <td>Denim</td>
-      <td>Medium</td>
-      <td>High</td>
-      <td>Medium</td>
-    </tr>
-    <tr>
-      <td>Polyester</td>
-      <td>Low</td>
-      <td>High</td>
-      <td>Low</td>
-    </tr>
-  </table>
-</section>
 <footer>
-  <p>Built for fashion merchandising & retail learning</p>
+  <p>Built for merchandising & retail learning</p>
 </footer>
 
 <script src="script.js"></script>
