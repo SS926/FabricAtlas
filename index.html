@@ -64,7 +64,30 @@
   </div>
 
 </section>
+<section class="comparison">
+  <h2>🔍 Dynamic Fabric Comparison</h2>
+  <p class="subtitle">Select two fabrics to compare merchandising impact</p>
 
+  <div class="compare-select">
+    <select id="fabric1">
+      <option value="">Select Fabric</option>
+      <option value="cotton">Cotton</option>
+      <option value="denim">Denim</option>
+      <option value="polyester">Polyester</option>
+    </select>
+
+    <select id="fabric2">
+      <option value="">Select Fabric</option>
+      <option value="cotton">Cotton</option>
+      <option value="denim">Denim</option>
+      <option value="polyester">Polyester</option>
+    </select>
+
+    <button onclick="compareFabrics()">Compare</button>
+  </div>
+
+  <div class="compare-grid" id="compareResult"></div>
+</section>
 <footer>
   <p>Built for fashion merchandising & retail learning</p>
 </footer>
