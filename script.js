@@ -5,7 +5,10 @@ const fabrics = {
     season: "Summer",
     cost: "Medium",
     durability: "Medium",
-    sustainability: 8,
+    sustainability: {
+    score: 4,
+    reason: "Natural fiber, biodegradable, low microplastic impact"
+},
     uses: ["T-shirts", "Kidswear", "Dresses"]
   },
   denim: {
@@ -14,7 +17,10 @@ const fabrics = {
     season: "All-season",
     cost: "Medium",
     durability: "High",
-    sustainability: 6,
+    sustainability: {
+    score: 3,
+    reason: "Heavy dyeing, washing, finishing footprint"
+},
     uses: ["Jeans", "Jackets", "Skirts"]
   },
   polyester: {
@@ -23,9 +29,24 @@ const fabrics = {
     season: "All-season",
     cost: "Low",
     durability: "High",
-    sustainability: 3,
+    sustainability: {
+    score: 2,
+    reason: "Fossil fuel based, non biodegradable, sheds persistent microplastics"
+},
     uses: ["Activewear", "Outerwear", "Lining"]
-  }
+  },
+  rayon: {
+  name: "Rayon",
+  gsm: "110–150",
+  season: "Summer",
+  cost: "Medium",
+  durability: "Low–Medium",
+  sustainability: {
+    score: 3,
+    reason: "Plant based but chemically intensive; pollution and deforestation risks"
+  },
+  uses: ["Dresses", "Tops", "Ethnic wear"]
+}
 };
 
 /* FILTER (already existing, keep it) */
@@ -56,7 +77,8 @@ function compareFabrics() {
       <p>Season: ${a.season}</p>
       <p>Cost: ${a.cost}</p>
       <p>Durability: ${a.durability}</p>
-      <p>Sustainability: ${a.sustainability}/10</p>
+     <p>Sustainability: ${a.sustainability.score}/10</p>
+     <p class="why">${a.sustainability.reason}</p>
       <div class="score-bar">
         <div style="width:${a.sustainability * 10}%"></div>
       </div>
@@ -68,10 +90,28 @@ function compareFabrics() {
       <p>Season: ${b.season}</p>
       <p>Cost: ${b.cost}</p>
       <p>Durability: ${b.durability}</p>
-      <p>Sustainability: ${b.sustainability}/10</p>
+     <p>Sustainability: ${a.sustainability.score}/10</p>
+     <p class="why">${a.sustainability.reason}</p>
       <div class="score-bar">
         <div style="width:${b.sustainability * 10}%"></div>
       </div>
     </div>
   `;
+  function recommendFabric() {
+  let best = "cotton";
+  let reason = "Balanced sustainability and comfort for mass retail.";
+
+  Object.values(fabrics).forEach(f => {
+    if (f.sustainability > fabrics[best].sustainability) {
+      best = f.name.toLowerCase();
+      reason = "Higher sustainability score.";
+    }
+  });
+
+  document.getElementById("recommendation").innerHTML = `
+    <h3>✅ Recommended Fabric</h3>
+    <p><strong>${fabrics[best].name}</strong></p>
+    <p class="why">${reason}</p>
+  `;
 }
+
