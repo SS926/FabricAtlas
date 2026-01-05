@@ -94,3 +94,20 @@ function compareFabrics() {
     </div>
   `;
 }
+function recommendFabric() {
+  let best = "cotton";
+  let reason = "Balanced sustainability and comfort for mass retail.";
+
+  Object.values(fabrics).forEach(f => {
+    if (f.sustainability > fabrics[best].sustainability) {
+      best = f.name.toLowerCase();
+      reason = "Higher sustainability score.";
+    }
+  });
+
+  document.getElementById("recommendation").innerHTML = `
+    <h3>✅ Recommended Fabric</h3>
+    <p><strong>${fabrics[best].name}</strong></p>
+    <p class="why">${reason}</p>
+  `;
+}
