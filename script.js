@@ -45,7 +45,62 @@ const fabrics = {
       score: 3,
       reason: "Synthetic fiber with high microplastic impact"
     }
-  }
+  },
+  linen: {
+  name: "Linen",
+  gsm: "150–220",
+  season: "Summer",
+  cost: "High",
+  durability: "High",
+  sustainability: {
+    score: 9,
+    reason:
+      "Derived from flax with minimal water usage, low pesticide requirement, and high biodegradability. Linen is considered one of the most environmentally responsible natural fibers, though higher cost limits mass retail usage."
+  },
+  uses: ["Shirts", "Summer trousers", "Resort wear"]
+},
+
+tencel: {
+  name: "Tencel™ (Lyocell)",
+  gsm: "120–180",
+  season: "All-season",
+  cost: "High",
+  durability: "Medium",
+  sustainability: {
+    score: 9,
+    reason:
+      "Produced from sustainably sourced wood pulp using a closed-loop process that recycles water and solvents. Tencel offers excellent softness and drape with significantly lower environmental impact compared to conventional viscose."
+  },
+  uses: ["Dresses", "Premium tops", "Innerwear"]
+},
+
+organicCotton: {
+  name: "Organic Cotton",
+  gsm: "130–190",
+  season: "Summer",
+  cost: "High",
+  durability: "Medium",
+  sustainability: {
+    score: 8,
+    reason:
+      "Cultivated without synthetic pesticides or fertilizers, reducing soil and water contamination. While water usage remains high, organic cotton improves biodiversity and supports responsible farming practices."
+  },
+  uses: ["Kidswear", "Basics", "Sustainable collections"]
+},
+
+recycledPolyester: {
+  name: "Recycled Polyester",
+  gsm: "180–240",
+  season: "All-season",
+  cost: "Medium",
+  durability: "High",
+  sustainability: {
+    score: 6,
+    reason:
+      "Made from post-consumer plastic waste such as PET bottles, reducing landfill impact and virgin petroleum usage. However, microplastic shedding during washing remains a sustainability concern."
+  },
+  uses: ["Activewear", "Outerwear", "Sportswear"]
+}
 };
 
 function filterFabric(type) {
