@@ -1,0 +1,134 @@
+/* 🌿 Beige–Cream–Green Theme */
+
+:root {
+  --bg: #f6f3ee;          /* cream background */
+  --card: #ffffff;       /* card white */
+  --accent: #6b8f71;     /* sage green */
+  --accent-soft: #dfe9e3;
+  --text-main: #2f3e34;  /* deep olive text */
+  --text-soft: #6b7c70;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  padding: 36px 20px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+.filters {
+  margin: 30px 0;
+}
+
+.filters button {
+  margin: 6px;
+  padding: 10px 18px;
+  border-radius: 22px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ---------- FABRIC GRID ---------- */
+.fabric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  padding: 20px 40px 40px;
+}
+
+/* ---------- FABRIC CARD ---------- */
+.fabric-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fabric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.fabric-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+/* ---------- TEXT ---------- */
+.fabric-card h3 {
+  margin: 6px 0 10px;
+  font-weight: 600;
+}
+
+.fabric-card p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.why {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #7a8c80;
+  font-style: italic;
+}
+
+/* ---------- TAGS ---------- */
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+}
+
+.green {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.blue,
+.pink,
+.yellow {
+  background: #f0efe9;
+  color: var(--text-soft);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 30px;
+  font-size: 12px;
+  color: var(--text-soft);
+}
