@@ -79,9 +79,6 @@ function compareFabrics() {
       <p>Durability: ${a.durability}</p>
      <p>Sustainability: ${a.sustainability.score}/10</p>
      <p class="why">${a.sustainability.reason}</p>
-      <div class="score-bar">
-        <div style="width:${a.sustainability * 10}%"></div>
-      </div>
     </div>
 
     <div class="compare-card">
@@ -92,9 +89,6 @@ function compareFabrics() {
       <p>Durability: ${b.durability}</p>
      <p>Sustainability: ${a.sustainability.score}/10</p>
      <p class="why">${a.sustainability.reason}</p>
-      <div class="score-bar">
-        <div style="width:${b.sustainability * 10}%"></div>
-      </div>
     </div>
   `;
   function recommendFabric() {
